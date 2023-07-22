@@ -90,8 +90,11 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
                   <Link key={link.name} href={link.href}>
                     <MenuItem onClick={handleCloseNavMenu}>
                       <Typography
-                        textAlign="center"
-                        color={isActive ? "red" : "black"}
+                        sx={{
+                          color: isActive ? "red" : "black",
+                          textAlign: "center",
+                          textTransform: "uppercase",
+                        }}
                       >
                         {link.name}
                       </Typography>
