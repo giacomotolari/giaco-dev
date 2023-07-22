@@ -6,12 +6,12 @@ import Navbar from "./components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Dashboard", href: "/dashboard" },
-  { name: "Projects", href: "/projects" },
-  { name: "Skills", href: "/skills" },
-  { name: "Companies", href: "/companies" },
-  { name: "About", href: "/about" },
+  { name: "home", href: "/" },
+  { name: "dashboard", href: "/dashboard" },
+  { name: "projects", href: "/projects" },
+  { name: "skills", href: "/skills" },
+  { name: "companies", href: "/companies" },
+  { name: "about", href: "/about" },
 ];
 
 export const metadata: Metadata = {
