@@ -14,11 +14,14 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MouseEvent, useState } from "react";
+import { z } from "zod";
 
-interface NavLink {
-  name: string;
-  href: string;
-}
+const NavLink = z.object({
+  name: z.string(),
+  href: z.string(),
+});
+
+type NavLink = z.infer<typeof NavLink>;
 
 export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
   const pathname = usePathname();
