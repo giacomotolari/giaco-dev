@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { z } from "zod";
+import { darkTheme } from "./theme/themes";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,10 +51,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar navLinks={navLinks} />
-        {children}
-      </body>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <body className={inter.className}>
+          <Navbar navLinks={navLinks} />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
