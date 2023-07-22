@@ -43,7 +43,7 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
             component="a"
             href="/"
             sx={{
-              mr: 20,
+              mr: 5,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
@@ -130,7 +130,7 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
-                      mx: 1.5,
+                      mx: 1.2,
                       color: isActive ? "red" : "white",
                       display: "block",
                       fontSize: "1.2rem",
