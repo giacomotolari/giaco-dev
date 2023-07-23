@@ -15,6 +15,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MouseEvent, useState } from "react";
 import { z } from "zod";
+import ThemeToggle from "./ThemeToggle";
 
 const NavLink = z.object({
   name: z.string(),
@@ -150,35 +151,9 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
             })}
           </Box>
 
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+          <Box sx={{ flexGrow: 1, display: { md: "flex" } }}>
+            <ThemeToggle />
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
