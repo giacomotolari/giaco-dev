@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { z } from "zod";
-import { darkTheme } from "./theme/themes";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import CustomThemeProvider from "./components/CustomThemeProvider";
+// import { darkTheme } from "./theme/themes";
+// import { ThemeProvider, CssBaseline } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,14 +51,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <CustomThemeProvider>
           <Navbar navLinks={navLinks} />
           {children}
-        </body>
-      </ThemeProvider>
+        </CustomThemeProvider>
+      </body>
     </html>
   );
 }
