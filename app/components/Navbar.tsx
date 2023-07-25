@@ -1,164 +1,81 @@
 "use client";
-
-import CodeIcon from "@mui/icons-material/Code";
-import MenuIcon from "@mui/icons-material/Menu";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { CodeIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MouseEvent, useState } from "react";
-import { z } from "zod";
-import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
 import WithWaitMounting from "./HOC/WithWaitMounting";
+import ThemeToggle from "./ThemeToggle";
+import { NavLink } from "../types";
 
 const ThemeToggleWithWaitMounting = WithWaitMounting(ThemeToggle);
 
-const NavLink = z.object({
-  name: z.string(),
-  href: z.string(),
-});
-
-type NavLink = z.infer<typeof NavLink>;
-
 export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
   const pathname = usePathname();
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false); // Use a boolean to track the state of mobile menu
 
-  const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleMenuToggle = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <AppBar position="fixed">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 5,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
+    <nav className="dark:bg-slate-800 flex items-center justify-between flex-wrap bg-teal-500 p-6">
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <CodeIcon className="h-5 w-5 mr-1" />
+        <span className="font-semibold text-xl tracking-tight">giaco-dev</span>
+      </div>
+      <div className="block lg:hidden" onClick={handleMenuToggle}>
+        <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <svg
+            className="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            giaco-dev
-          </Typography>
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <ThemeToggleWithWaitMounting />
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link key={link.name} href={link.href}>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography
-                        sx={{
-                          color: isActive ? "red" : "black",
-                          textAlign: "center",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        {link.name}
-                      </Typography>
-                    </MenuItem>
-                  </Link>
-                );
-              })}
-            </Menu>
-          </Box>
-          <CodeIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            giaco-dev
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+      <div className="hidden lg:flex w-full flex-grow lg:items-center lg:w-auto">
+        <div className="text-sm lg:flex-grow">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link key={link.name} href={link.href}>
+                <p
+                  className={`block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 ${
+                    isActive ? "text-white" : ""
+                  }`}
+                >
+                  {link.name}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {isMobileMenuOpen && (
+        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div className="text-sm lg:flex-grow">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link key={link.name} href={link.href}>
-                  <Button
-                    key={link.name}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      my: 2,
-                      mx: 1.2,
-                      color: isActive ? "red" : "white",
-                      display: "block",
-                      fontSize: "1.2rem",
-                      fontWeight: isActive ? 700 : 400,
-                    }}
+                  <p
+                    className={`block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 ${
+                      isActive ? "text-white" : ""
+                    }`}
                   >
                     {link.name}
-                  </Button>
+                  </p>
                 </Link>
               );
             })}
-          </Box>
-
-          <Box sx={{ flexGrow: 1, display: { md: "flex" } }}>
-            <ThemeToggleWithWaitMounting />
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
