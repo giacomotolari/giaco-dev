@@ -22,6 +22,7 @@
     "eslint-config-next": "13.4.11",
     "husky": "^8.0.3",
     "next": "13.4.11",
+    "next-themes": "^0.2.1",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +30,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@heroicons/react": "^1.0.6",
     "@types/node": "^20.4.2",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",

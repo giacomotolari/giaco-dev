@@ -9,7 +9,8 @@ export default function CustomThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-    const themeStore = useThemeStore();
+  const themeStore = useThemeStore();
+  console.log("themeStore.theme:", themeStore.theme);
   return (
     <ThemeProvider theme={themeStore.theme === "dark" ? darkTheme : lightTheme}>
       <CssBaseline />

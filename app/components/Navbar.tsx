@@ -16,6 +16,9 @@ import { usePathname } from "next/navigation";
 import { MouseEvent, useState } from "react";
 import { z } from "zod";
 import ThemeToggle from "./ThemeToggle";
+import WithWaitMounting from "./HOC/WithWaitMounting";
+
+const ThemeToggleWithWaitMounting = WithWaitMounting(ThemeToggle);
 
 const NavLink = z.object({
   name: z.string(),
@@ -152,7 +155,7 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { md: "flex" } }}>
-            <ThemeToggle />
+            <ThemeToggleWithWaitMounting />
           </Box>
         </Toolbar>
       </Container>

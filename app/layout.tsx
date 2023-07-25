@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { z } from "zod";
 import CustomThemeProvider from "./components/CustomThemeProvider";
+import Providers from "./providers";
 // import { darkTheme } from "./theme/themes";
 // import { ThemeProvider, CssBaseline } from "@mui/material";
 
@@ -51,12 +52,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="dark"
+      style={{ colorScheme: "dark" }} /*suppressHydrationWarning*/
+    >
       <body className={inter.className}>
-        <CustomThemeProvider>
+        <Providers>
+          {/* <CustomThemeProvider> */}
           <Navbar navLinks={navLinks} />
           {children}
-        </CustomThemeProvider>
+          {/* ... (other code) */}
+        </Providers>
       </body>
     </html>
   );
