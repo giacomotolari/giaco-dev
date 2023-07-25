@@ -7,7 +7,7 @@
     "build": "next lint && next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier-write",
+    "format": "prettier --config .prettierrc 'app/**/*.tsx' --write",
     "prepare": "husky install"
   },
   "dependencies": {
