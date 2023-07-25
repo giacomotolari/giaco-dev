@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next lint && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --config .prettierrc 'app/**/*.tsx' --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -17,8 +19,8 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
-    "eslint": "8.45.0",
     "eslint-config-next": "13.4.11",
+    "husky": "^8.0.3",
     "next": "13.4.11",
     "postcss": "8.4.27",
     "react": "18.2.0",
@@ -28,6 +30,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   }
