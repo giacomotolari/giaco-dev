@@ -6,6 +6,7 @@ interface WithWaitMountingProps {}
 
 export default function WithWaitMounting<P extends object>(
   WrappedComponent: ComponentType<P>,
+  skeleton?: React.ReactNode,
 ): React.FC<P & WithWaitMountingProps> {
   const WithWaitMountingComponent: React.FC<P & WithWaitMountingProps> = (
     props,
@@ -20,7 +21,7 @@ export default function WithWaitMounting<P extends object>(
     }, []);
 
     if (!isMounted) {
-      return null; // You can show some loading placeholder here if you want
+      return skeleton ? skeleton : null;
     }
 
     return <WrappedComponent {...props} />;

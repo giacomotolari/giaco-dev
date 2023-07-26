@@ -31,12 +31,20 @@ function DarkModeToggle() {
       onClick={handleDarkModeToggle}
     >
       {resolvedTheme === "dark" ? (
-        <SunIcon className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
+        <SunIcon className="h-6 w-6 lg:h-6 lg:w-6 text-orange-300" />
       ) : (
-        <MoonIcon className="h-6 w-6 lg:h-8 lg:w-8 text-slate-800" />
+        <MoonIcon className="h-6 w-6 lg:h-6 lg:w-6 text-slate-800" />
       )}
     </button>
   );
 }
 
-export default WithWaitMounting(DarkModeToggle);
+export default WithWaitMounting(
+  DarkModeToggle,
+  <button
+    aria-label="Toggle dark mode"
+    type="button"
+    color="inherit"
+    className="flex items-center justify-center rounded-lg p-2 transition-colors h-6 w-6 lg:h-6 lg:w-6 text-orange-300 bg-black bg-black-300 animate-pulse blur"
+  ></button>,
+);
