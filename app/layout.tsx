@@ -1,15 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/UI/navbar/Navbar";
 import Providers from "./providers";
-import { navLinks } from "./data";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "giaco-dev",
-  description: "portfolio of giacomo tolari",
+  description: "Giacomo Tolari's portfolio",
 };
 
 export default function RootLayout({
@@ -26,7 +25,7 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <Providers>
-          <Navbar navLinks={navLinks} />
+          <Navbar />
           {children}
         </Providers>
       </body>

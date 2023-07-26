@@ -1,11 +1,12 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import WithWaitMounting from "../../HOC/WithWaitMounting";
 
-export default function ThemeToggle() {
+function DarkModeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
 
-  const handleThemeToggle = () => {
+  const handleDarkModeToggle = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
@@ -27,13 +28,15 @@ export default function ThemeToggle() {
       type="button"
       color="inherit"
       className="flex items-center justify-center rounded-lg p-2 transition-colors"
-      onClick={handleThemeToggle}
+      onClick={handleDarkModeToggle}
     >
       {resolvedTheme === "dark" ? (
-        <SunIcon className="h-5 w-5 text-orange-300" />
+        <SunIcon className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
       ) : (
-        <MoonIcon className="h-5 w-5 text-slate-800" />
+        <MoonIcon className="h-6 w-6 lg:h-8 lg:w-8 text-slate-800" />
       )}
     </button>
   );
 }
+
+export default WithWaitMounting(DarkModeToggle);

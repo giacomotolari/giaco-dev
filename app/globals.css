@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base{
+@layer base {
   body {
-      @apply dark:bg-gray-800 bg-white
+    @apply dark:bg-slate-950 bg-white;
   }
-} */
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
