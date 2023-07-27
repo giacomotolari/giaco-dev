@@ -21,7 +21,7 @@ export default function WithWaitMounting<P extends object>(
     }, []);
 
     if (!isMounted) {
-      return skeleton ? skeleton : null;
+      return skeleton || null;
     }
 
     return <WrappedComponent {...props} />;

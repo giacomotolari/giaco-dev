@@ -39,12 +39,13 @@ function DarkModeToggle() {
   );
 }
 
-export default WithWaitMounting(
-  DarkModeToggle,
+const skeleton = (
   <button
     aria-label="Toggle dark mode"
     type="button"
     color="inherit"
-    className="flex items-center justify-center rounded-lg p-2 transition-colors h-6 w-6 lg:h-6 lg:w-6 text-orange-300 bg-black bg-black-300 animate-pulse blur"
-  ></button>,
+    className="flex items-center justify-center rounded-lg p-2 transition-colors h-6 w-6 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black  animate-pulse blur"
+  ></button>
 );
+
+export default WithWaitMounting(DarkModeToggle, skeleton);
