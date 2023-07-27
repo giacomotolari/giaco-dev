@@ -25,7 +25,9 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <Providers>
-          <Navbar />
+          <header className="sticky top-0 z-50">
+            <Navbar />
+          </header>
           {children}
         </Providers>
       </body>
