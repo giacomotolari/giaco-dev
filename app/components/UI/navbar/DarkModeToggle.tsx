@@ -1,7 +1,8 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import WithWaitMounting from "../../HOC/WithWaitMounting";
+import WithWaitMounting from "@/components/HOC/WithWaitMounting";
+import { Skeleton } from "@/components/shadcn/ui/skeleton";
 
 function DarkModeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -39,13 +40,14 @@ function DarkModeToggle() {
   );
 }
 
-const skeleton = (
-  <button
-    aria-label="Toggle dark mode"
-    type="button"
-    color="inherit"
-    className="flex items-center justify-center rounded-lg p-2 transition-colors h-6 w-6 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black  animate-pulse blur"
-  ></button>
+export default WithWaitMounting(
+  DarkModeToggle,
+  <Skeleton className="rounded-full">
+    <button
+      aria-label="Toggle dark mode"
+      type="button"
+      color="inherit"
+      className="flex items-center justify-center rounded-lg p-2 transition-colors h-6 w-6 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black"
+    ></button>
+  </Skeleton>,
 );
-
-export default WithWaitMounting(DarkModeToggle, skeleton);
