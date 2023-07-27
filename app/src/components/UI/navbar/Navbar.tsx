@@ -14,11 +14,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="dark:bg-slate-800 flex items-center justify-between flex-wrap bg-teal-500 p-6 h-20 lg:h-24">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <CodeIcon className="h-5 w-5 mr-1" />
+    <nav className="flex h-20 flex-wrap items-center justify-between bg-teal-500 p-6 dark:bg-slate-800 lg:h-24">
+      <div className="mr-6 flex flex-shrink-0 items-center text-white">
+        <CodeIcon className="mr-1 h-5 w-5" />
         <Link href={navData.home.href}>
-          <span className="font-semibold text-xl tracking-tight">
+          <span className="text-xl font-semibold tracking-tight">
             giaco-dev
           </span>
         </Link>
@@ -30,9 +30,9 @@ export default function Navbar() {
 
       <DarkModeToggle />
       <div className="block lg:hidden" onClick={handleMenuToggle}>
-        <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
           <svg
-            className="fill-current h-3 w-3"
+            className="h-3 w-3 fill-current"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >

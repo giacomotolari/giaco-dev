@@ -24,16 +24,16 @@ export default function Links({ classes }: Links) {
           return (
             <Link key={link.name} href={link.href}>
               {link.name === "home" && (
-                <HomeIcon className="h-6 w-6 lg:h-8 lg:w-8 inline" />
+                <HomeIcon className="inline h-6 w-6 lg:h-8 lg:w-8" />
               )}
               {link.name === "contact" && (
-                <ChatAlt2Icon className="h-6 w-6 lg:h-8 lg:w-8 inline" />
+                <ChatAlt2Icon className="inline h-6 w-6 lg:h-8 lg:w-8" />
               )}
 
               <p
-                className={`block mt-4 lg:inline-block lg:mt-0 text-teal-200 uppercase  mr-4 lg:mx-6 ${
+                className={`mr-4 mt-4 block uppercase text-teal-200 lg:mx-6  lg:mt-0 lg:inline-block ${
                   isActive
-                    ? "dark:text-white text-black font-bold"
+                    ? "font-bold text-black dark:text-white"
                     : "hover:text-white"
                 }`}
               >

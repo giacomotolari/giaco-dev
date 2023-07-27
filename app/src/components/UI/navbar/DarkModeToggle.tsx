@@ -32,9 +32,9 @@ function DarkModeToggle() {
       onClick={handleDarkModeToggle}
     >
       {resolvedTheme === "dark" ? (
-        <SunIcon className="h-5 w-5 lg:h-6 lg:w-6 text-orange-300" />
+        <SunIcon className="h-5 w-5 text-orange-300 lg:h-6 lg:w-6" />
       ) : (
-        <MoonIcon className="h-5 w-5 lg:h-6 lg:w-6 text-slate-800" />
+        <MoonIcon className="h-5 w-5 text-slate-800 lg:h-6 lg:w-6" />
       )}
     </button>
   );
@@ -45,7 +45,7 @@ export default WithWaitMounting(
   <button
     aria-label="Skeleton Toggle dark mode"
     color="inherit"
-    className="flex items-center justify-center rounded-lg p-2 transition-colors h-5 w-5 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black"
+    className="flex h-5 w-5 items-center justify-center rounded-lg bg-black p-2 transition-colors dark:bg-orange-300 lg:h-6 lg:w-6"
   ></button>,
   "",
   false,
