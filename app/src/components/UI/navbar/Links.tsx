@@ -1,4 +1,4 @@
-import { navLinks } from "@/src/data/navigation";
+import { navLinks, navData } from "@/src/data/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -11,7 +11,34 @@ interface Links {
   classes: string;
 }
 
-const navLinksWithIcons = [{}];
+const { home, dashboard, projects, skills, companies, about } = navData;
+
+const navLinksWithIcons = [
+  {
+    ...home,
+    icon: <HomeIcon className="navlink-icon" />,
+  },
+  {
+    ...dashboard,
+    icon: <IdentificationIcon className="navlink-icon" />,
+  },
+  {
+    ...projects,
+    icon: <IdentificationIcon className="navlink-icon" />,
+  },
+  {
+    ...skills,
+    icon: <IdentificationIcon className="navlink-icon" />,
+  },
+  {
+    ...companies,
+    icon: <IdentificationIcon className="navlink-icon" />,
+  },
+  {
+    ...about,
+    icon: <IdentificationIcon className="navlink-icon" />,
+  },
+];
 
 export default function Links({ classes }: Links) {
   const pathname = usePathname();
@@ -19,17 +46,11 @@ export default function Links({ classes }: Links) {
   return (
     <div className={classes}>
       <div className="text-sm lg:flex-grow">
-        {navLinks.map((link) => {
+        {navLinksWithIcons.map((link) => {
           const isActive = pathname === link.href;
           return (
             <Link key={link.name} href={link.href}>
-              {link.name === "home" && (
-                <HomeIcon className="inline h-6 w-6 lg:h-8 lg:w-8" />
-              )}
-              {link.name === "contact" && (
-                <ChatAlt2Icon className="inline h-6 w-6 lg:h-8 lg:w-8" />
-              )}
-
+              {link.icon}
               <p
                 className={`mr-4 mt-4 block uppercase text-teal-200 lg:mx-6  lg:mt-0 lg:inline-block ${
                   isActive

@@ -74,3 +74,9 @@
     --ring: 217.2 32.6% 17.5%;
   }
 }
+
+@layer components{
+  .navlink-icon {
+    @apply inline h-6 w-6 lg:h-8 lg:w-8;
+  }
+}
