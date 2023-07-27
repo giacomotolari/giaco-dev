@@ -1,5 +1,5 @@
 import { useEffect, useState, FC, ReactNode } from "react";
-import { Skeleton } from "../shadcn/ui/skeleton";
+import { Skeleton } from "@/src/components/shadcn/ui/skeleton";
 
 type ComponentType<P> = FC<P>;
 
