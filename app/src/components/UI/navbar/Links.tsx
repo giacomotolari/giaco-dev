@@ -4,7 +4,10 @@ import { usePathname } from "next/navigation";
 import {
   IdentificationIcon,
   HomeIcon,
-  ChatAlt2Icon,
+  AcademicCapIcon,
+  ChartSquareBarIcon,
+  UserGroupIcon,
+  FolderIcon,
 } from "@heroicons/react/solid";
 
 interface Links {
@@ -20,19 +23,19 @@ const navLinksWithIcons = [
   },
   {
     ...dashboard,
-    icon: <IdentificationIcon className="navlink-icon" />,
+    icon: <ChartSquareBarIcon className="navlink-icon" />,
   },
   {
     ...projects,
-    icon: <IdentificationIcon className="navlink-icon" />,
+    icon: <FolderIcon className="navlink-icon" />,
   },
   {
     ...skills,
-    icon: <IdentificationIcon className="navlink-icon" />,
+    icon: <AcademicCapIcon className="navlink-icon" />,
   },
   {
     ...companies,
-    icon: <IdentificationIcon className="navlink-icon" />,
+    icon: <UserGroupIcon className="navlink-icon" />,
   },
   {
     ...about,
