@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, FC, ReactNode } from "react";
+import { Skeleton } from "../shadcn/ui/skeleton";
 
-type ComponentType<P> = React.FC<P>;
-
-interface WithWaitMountingProps {}
+type ComponentType<P> = FC<P>;
 
 export default function WithWaitMounting<P extends object>(
   WrappedComponent: ComponentType<P>,
-  skeleton?: React.ReactNode,
-): React.FC<P & WithWaitMountingProps> {
-  const WithWaitMountingComponent: React.FC<P & WithWaitMountingProps> = (
-    props,
-  ) => {
+  skeletonContent?: ReactNode,
+  className?: string,
+  blur?: boolean,
+): FC<P> {
+  const WithWaitMountingComponent: FC<P> = (props) => {
     const [isMounted, setIsMounted] = useState(false);
-
     useEffect(() => {
       setIsMounted(true);
       return () => {
@@ -21,7 +19,11 @@ export default function WithWaitMounting<P extends object>(
     }, []);
 
     if (!isMounted) {
-      return skeleton || null;
+      return skeletonContent ? (
+        <Skeleton className={`${className} ${blur && "blur"} rounded-full`}>
+          {skeletonContent}
+        </Skeleton>
+      ) : null;
     }
 
     return <WrappedComponent {...props} />;

@@ -42,12 +42,11 @@ function DarkModeToggle() {
 
 export default WithWaitMounting(
   DarkModeToggle,
-  <Skeleton className="rounded-full blur">
-    <button
-      aria-label="Toggle dark mode"
-      type="button"
-      color="inherit"
-      className="flex items-center justify-center rounded-lg p-2 transition-colors h-5 w-5 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black"
-    ></button>
-  </Skeleton>,
+  <button
+    aria-label="Skeleton Toggle dark mode"
+    color="inherit"
+    className="flex items-center justify-center rounded-lg p-2 transition-colors h-5 w-5 lg:h-6 lg:w-6 dark:bg-orange-300 bg-black"
+  ></button>,
+  "",
+  false,
 );
