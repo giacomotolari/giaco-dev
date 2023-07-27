@@ -77,6 +77,6 @@
 
 @layer components{
   .navlink-icon {
-    @apply inline h-6 w-6 lg:h-8 lg:w-8;
+    @apply inline h-5 w-5 lg:h-7 lg:w-7;
   }
 }

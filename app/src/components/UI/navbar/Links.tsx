@@ -1,4 +1,4 @@
-import { navLinks, navData } from "@/src/data/navigation";
+import { navData } from "@/src/data/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -49,10 +49,10 @@ export default function Links({ classes }: Links) {
         {navLinksWithIcons.map((link) => {
           const isActive = pathname === link.href;
           return (
-            <Link key={link.name} href={link.href}>
+            <Link key={link.name} href={link.href} className="">
               {link.icon}
               <p
-                className={`mr-4 mt-4 block uppercase text-teal-200 lg:mx-6  lg:mt-0 lg:inline-block ${
+                className={`mr-4 mt-4  uppercase text-teal-200 lg:mx-6  lg:mt-0 lg:inline-block ${
                   isActive
                     ? "font-bold text-black dark:text-white"
                     : "hover:text-white"
