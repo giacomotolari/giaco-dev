@@ -2,7 +2,7 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import { useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
-import { navData } from "../../../data";
+import { navData } from "@/src/data/navigation";
 import Link from "next/link";
 import Links from "./Links";
 

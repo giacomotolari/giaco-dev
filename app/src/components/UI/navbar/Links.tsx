@@ -1,4 +1,4 @@
-import { navLinks } from "../../../data";
+import { navLinks } from "@/src/data/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {

@@ -1,4 +1,4 @@
-import { NavData } from "./types";
+import { NavData } from "@/src/types/navigation";
 
 const navData: NavData = {
   home: { name: "home", href: "/" },
@@ -10,6 +10,5 @@ const navData: NavData = {
 };
 
 const navLinks = Object.values(navData);
-
 
 export { navData, navLinks };

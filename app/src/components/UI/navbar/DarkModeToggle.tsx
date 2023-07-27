@@ -1,8 +1,8 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import WithWaitMounting from "@/components/HOC/WithWaitMounting";
-import { Skeleton } from "@/components/shadcn/ui/skeleton";
+import WithWaitMounting from "@/src/components/HOC/WithWaitMounting";
+import { Skeleton } from "@/src/components/shadcn/ui/skeleton";
 
 function DarkModeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
