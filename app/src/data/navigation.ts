@@ -6,6 +6,7 @@ const navData: NavData = {
   projects: { name: "projects", href: "/projects" },
   skills: { name: "skills", href: "/skills" },
   companies: { name: "companies", href: "/companies" },
+  contact: { name: "contact", href: "/contact" },
   about: { name: "about", href: "/about" },
 };
 

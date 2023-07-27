@@ -8,13 +8,15 @@ import {
   ChartSquareBarIcon,
   UserGroupIcon,
   FolderIcon,
+  ChatIcon,
 } from "@heroicons/react/solid";
 
 interface Links {
   classes: string;
 }
 
-const { home, dashboard, projects, skills, companies, about } = navData;
+const { home, dashboard, projects, skills, companies, contact, about } =
+  navData;
 
 const navLinksWithIcons = [
   {
@@ -38,6 +40,10 @@ const navLinksWithIcons = [
     icon: <UserGroupIcon className="navlink-icon" />,
   },
   {
+    ...contact,
+    icon: <ChatIcon className="navlink-icon" />,
+  },
+  {
     ...about,
     icon: <IdentificationIcon className="navlink-icon" />,
   },
@@ -52,17 +58,17 @@ export default function Links({ classes }: Links) {
         {navLinksWithIcons.map((link) => {
           const isActive = pathname === link.href;
           return (
-            <Link key={link.name} href={link.href} className="">
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`mt-2 flex items-center lg:mr-4 lg:mt-0 lg:inline-block ${
+                isActive
+                  ? "font-bold text-black dark:text-white"
+                  : "hover:text-white"
+              }`}
+            >
               {link.icon}
-              <p
-                className={`mr-4 mt-4  uppercase text-teal-200 lg:mx-6  lg:mt-0 lg:inline-block ${
-                  isActive
-                    ? "font-bold text-black dark:text-white"
-                    : "hover:text-white"
-                }`}
-              >
-                {link.name}
-              </p>
+              <p className={`uppercase lg:inline-block `}>{link.name}</p>
             </Link>
           );
         })}
