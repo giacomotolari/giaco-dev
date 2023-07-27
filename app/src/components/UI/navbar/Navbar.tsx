@@ -42,7 +42,7 @@ export default function Navbar() {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <Links classes="w-full block flex-grow lg:flex lg:items-center lg:w-auto" />
+        <Links classes="w-full block flex-grow lg:flex lg:items-center lg:w-auto bg-teal-500 p-6 dark:bg-slate-800 " />
       )}
     </nav>
   );
