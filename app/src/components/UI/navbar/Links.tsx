@@ -63,7 +63,7 @@ export default function Links({ classes }: Links) {
               href={link.href}
               className={`mt-2 flex items-center lg:mr-4 lg:mt-0 lg:inline-block ${
                 isActive
-                  ? "font-bold text-black dark:text-white"
+                  ? "text-black dark:text-white font-bold"
                   : "hover:text-white"
               }`}
             >

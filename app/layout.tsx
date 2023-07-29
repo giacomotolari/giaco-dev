@@ -9,6 +9,16 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "giaco-dev",
   description: "Giacomo Tolari's portfolio",
+  openGraph: {
+    images: [
+      {
+        url: "https://giaco.dev/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "giaco.dev",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
