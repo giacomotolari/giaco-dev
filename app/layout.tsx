@@ -16,10 +16,13 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "giaco.dev",
+        secureUrl:
+          "https://images.unsplash.com/photo-1683009427479-c7e36bbb7bca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       },
     ],
   },
 };
+
 export default function RootLayout({
   children,
 }: {
