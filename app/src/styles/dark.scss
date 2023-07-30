@@ -1,5 +1,6 @@
 .dark {
   --background: hsl(0, 0%, 4%);
+  --nav-layout: hsl(0, 0%, 4%);
   --foreground: hsl(210, 18%, 80%);
   --text: hsl(0, 0%, 100%);
   --title: hsl(41, 96%, 40%);
@@ -9,7 +10,7 @@
   --popover-foreground: hsl(210, 40%, 98%);
   --card: hsl(222.2, 84%, 4.9%);
   --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(41, 84%, 40%);
+  --border: hsl(0, 0%, 100%);
   --input: hsl(41, 96%, 27%);
   --primary: hsl(210, 40%, 98%);
   --primary-foreground: hsl(222.2, 47.4%, 11.2%);

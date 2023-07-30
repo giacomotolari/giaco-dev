@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "src/styles/variables.scss";
 @import "src/styles/base.scss";
 @import "src/styles/dark.scss";
 @import "src/styles/light.scss";

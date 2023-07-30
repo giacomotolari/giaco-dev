@@ -14,8 +14,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6 dark:bg-slate-800 lg:h-24">
-      <div className="mr-6 flex flex-shrink-0 items-center text-white">
+    <nav className="bg-dark-yellow flex flex-wrap items-center justify-between p-6 dark:bg-slate-800 lg:h-24">
+      <div className="mr-6 flex flex-shrink-0 items-center">
         <CodeIcon className="mr-2 h-5 w-5" />
         <Link href={navData.home.href}>
           <span className="text-xl font-semibold tracking-tight">
@@ -30,7 +30,7 @@ export default function Navbar() {
 
       <DarkModeToggle />
       <div className="block lg:hidden" onClick={handleMenuToggle}>
-        <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
+        <button className="flex items-center rounded border px-3 py-2">
           <svg
             className="h-3 w-3 fill-current"
             viewBox="0 0 20 20"
@@ -42,7 +42,7 @@ export default function Navbar() {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <Links classes="w-full block flex-grow lg:flex lg:items-center lg:w-auto bg-teal-500 p-6 dark:bg-slate-800 " />
+        <Links classes="w-full block flex-grow lg:flex lg:items-center lg:w-auto  p-6 dark:bg-slate-800 " />
       )}
     </nav>
   );

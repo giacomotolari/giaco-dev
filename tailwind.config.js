@@ -8,21 +8,6 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    color: {
-      light: {
-        white: "rgb(255, 255, 255)",
-        black: "rgb(0, 0, 0)",
-        red: "rgb(255, 172, 65)",
-        yellow: "rgb(255, 30, 86)",
-      },
-      dark: {
-        white: "rgb(0, 0, 0)",
-        black: "rgb(0, 0, 0)",
-        red: "rgb(255, 172, 65)",
-        yellow: "rgb(255, 30, 86)",
-      },
-      // https://colorhunt.co/palette/000000323232ff1e56ffac41
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -37,6 +22,7 @@ module.exports = {
         input: "var(--input)",
         ring: "var(--ring)",
         background: "var(--background)",
+        navLayout: "var(--nav-layout)",
         foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",
