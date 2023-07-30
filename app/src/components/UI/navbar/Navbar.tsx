@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-teal-500 dark:bg-slate-800 flex flex-wrap items-center justify-between p-6 lg:h-24 ">
+    <nav className="bg-teal-500 dark:bg-slate-800 flex flex-wrap items-center justify-between p-6 lg:h-24">
       <div className="text-white mr-6 flex flex-shrink-0 items-center">
         <CodeIcon className="mr-2 h-5 w-5" />
         <Link href={navData.home.href}>

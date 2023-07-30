@@ -9,8 +9,19 @@ module.exports = {
   ],
   theme: {
     colors: {
-      // light: https://colorhunt.co/palette/fbfacddebaceba94d17f669d,
-      // dark: https://colorhunt.co/palette/000000323232ff1e56ffac41
+      light: {
+        white: "rgb(255, 255, 255)",
+        black: "rgb(0, 0, 0)",
+        red: "rgb(255, 172, 65)",
+        yellow: "rgb(255, 30, 86)",
+      },
+      dark: {
+        black: "rgb(0, 0, 0)",
+        white: "rgb(0, 0, 0)",
+        red: "rgb(255, 172, 65)",
+        yellow: "rgb(255, 30, 86)",
+      },
+      // https://colorhunt.co/palette/000000323232ff1e56ffac41
     },
     container: {
       center: true,
