@@ -1,0 +1,5 @@
+@layer components {
+  .navlink-icon {
+    @apply mr-1 inline h-5 w-5 lg:h-7 lg:w-7;
+  }
+}

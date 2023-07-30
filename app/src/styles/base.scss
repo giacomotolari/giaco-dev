@@ -1,0 +1,13 @@
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  :root {
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
