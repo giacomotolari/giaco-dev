@@ -1,24 +1,24 @@
 .dark {
   --background: hsl(0, 0%, 4%);
-  --foreground: hsl(210, 40%, 98%);
-  --text: hsl(222.2, 84%, 4.9%);
-  --title: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 18%, 80%);
+  --text: hsl(0, 0%, 100%);
+  --title: hsl(41, 96%, 40%);
   --muted: hsl(217.2, 32.6%, 17.5%);
   --muted-foreground: hsl(215, 20.2%, 65.1%);
   --popover: hsl(222.2, 84%, 4.9%);
   --popover-foreground: hsl(210, 40%, 98%);
   --card: hsl(222.2, 84%, 4.9%);
   --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217.2, 32.6%, 17.5%);
-  --input: hsl(217.2, 32.6%, 17.5%);
+  --border: hsl(41, 84%, 40%);
+  --input: hsl(41, 96%, 27%);
   --primary: hsl(210, 40%, 98%);
   --primary-foreground: hsl(222.2, 47.4%, 11.2%);
-  --secondary: hsl(217.2, 32.6%, 17.5%);
-  --accent: hsl(217.2, 32.6%, 17.5%);
+  --secondary: hsl(41, 58%, 36%);
+  --accent: hsl(32, 96%, 40%);
   --accent-foreground: hsl(210, 40%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 85.7%, 97.3%);
-  --ring: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(0, 87%, 37%);
 
   h1,
   h2,
