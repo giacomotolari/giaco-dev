@@ -1,4 +1,3 @@
-import Sidebar from "@/src/components/UI/sidebar/Sidebar";
 
 export default function ProjectsLayout({
   children,
@@ -21,7 +20,7 @@ export default function ProjectsLayout({
   ];
   return (
     <>
-      <Sidebar items={items} />
+      {/* <Sidebar items={items} /> */}
       {children}
     </>
   );
