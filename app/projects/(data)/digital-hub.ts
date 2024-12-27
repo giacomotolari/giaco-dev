@@ -1,9 +1,9 @@
 import { TeamProject } from "../types";
 
-export const weDart: TeamProject = {
-  name: "weDart",
+export const digitalHUb: TeamProject = {
+  name: "digital Hub",
   description:
-    "Dart Game, where you can play online and offline. The weDart Hardware help to calculate the points. Make it easy to play Dart, calculate players statistics and the points",
+    "Privat community for digital Hub, rent a desk, meeting rooms and events.",
   urls: {
     webPage: "https://www.wedart.io/",
     download: {
@@ -11,25 +11,24 @@ export const weDart: TeamProject = {
       appStore: "https://apps.apple.com/de/app/wedart/id6443843436",
     },
   },
-  categories: ["Dart Game"],
+  categories: ["Community", "Rent a Desk", "Meeting Rooms", "Events"],
   assets: {
     images: {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: "paused",
+  status: "maintained",
   dates: {
-    start: "2022",
+    start: "2021",
   },
   type: "for-company",
   technologies: {
     frontend: {
       languages: ["JavaScript"],
-      frameworks: ["React"],
-      stateManagements: ["React Context API"],
+      libraries: ["jQuery"],
       style: {
         languages: ["CSS"],
-        preprocessor: "Sass",
+        frameworks: ["Bootstrap"],
       },
     },
     backend: {
@@ -39,21 +38,19 @@ export const weDart: TeamProject = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: ["web", "mobile"],
+  runsOn: ["web"],
   my: {
-    chronologicalProjectOrder: 6,
+    chronologicalProjectOrder: 5,
     learned: {
       learnedAllUsedTechnologies: true,
     },
   },
   workedFor: "Taliox",
-  customers: ["weDart"],
-  teams: [{ name: "weDart" }],
+  customers: ["digital Hub"],
   myContribution: {
     roles: ["Frontend Developer"],
     dates: {
-      start: "Juni 2022",
-      end: "Juli 2023",
+      start: "April 2022",
     },
   },
 };

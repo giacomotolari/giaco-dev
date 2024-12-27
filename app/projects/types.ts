@@ -5,13 +5,12 @@ interface Project {
   urls: Partial<Urls>;
   categories: string[];
   assets?: Partial<Assests>;
-  status: "planned" | "in-progress" | "completed" | "archived" | "canceled"| "paused";
+  status: "planned" | "in-progress" | "completed" | "archived" | "canceled"| "paused" | "maintained";
   dates: {
     start: string;
     end?: string;
   };
-  type: "personal" | "team" | "company";
-  level: "beginner" | "intermediate" | "advanced";
+  type: "personal" | "team" | "for-company";
   technologies: Partial<TechnologyStack>;
   runsOn: RunsOn[];
   my?: My;
@@ -60,6 +59,7 @@ interface TechnologyStack {
 interface FrontendStack {
   languages: ("JavaScript" | "Typescript")[];
   frameworks?: FrontendFramework[];
+  libraries?: FrontendLibrary[];
   style?: Style;
   uiFramework?: ("Ionic" | "shadcn/UI")[];
   stateManagements?: ("Redux" | "React Context API")[];
@@ -68,6 +68,7 @@ interface FrontendStack {
 }
 
 type FrontendFramework = "React" | "Next.js";
+type FrontendLibrary = "jQuery";
 interface Style {
   languages: "CSS"[];
   preprocessor?: "Sass";
@@ -132,7 +133,6 @@ interface MyContribution {
     | "Backend Developer"
     | "Full Stack Developer"
   )[];
-  used?: Partial<TechnologyStack>;
   dates: {
     start: string;
     end?: string;

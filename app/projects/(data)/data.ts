@@ -1,6 +1,6 @@
 import { Projects } from "../types";
-import { portfolioOld } from "./portfolioOld";
+import { weDart } from "./weDart";
 
-const projects: Projects = [portfolioOld];
+const projects: Projects = [weDart];
 
 export default projects;
