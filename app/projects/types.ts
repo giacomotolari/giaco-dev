@@ -5,7 +5,7 @@ interface Project {
   urls: Partial<Urls>;
   categories: string[];
   assets?: Partial<Assests>;
-  status: "planned" | "in-progress" | "completed";
+  status: "planned" | "in-progress" | "completed" | "archived" | "canceled"| "paused";
   dates: {
     start: string;
     end?: string;
@@ -17,6 +17,7 @@ interface Project {
   my?: My;
   goals?: ("learning" | "earn money" | "showcasing")[] | string[];
   customers?: string[];
+  workedFor?: string;
   extraInfos?: string;
 }
 
@@ -80,12 +81,13 @@ type CSSFramework = "Bootstrap" | "TailwindCSS";
 interface BackendStack {
   languages: BackendLanguage[];
   frameworks?: BackendFramework[];
-  database: string[];
+  databases: Database[];
   testing?: string[];
 }
 
 type BackendLanguage = "Node.js" | "Python";
 type BackendFramework = "Express.js" | "Django";
+type Database = "MongoDB" | "PostgreSQL" | "SQLite";
 
 // RUNS ON
 

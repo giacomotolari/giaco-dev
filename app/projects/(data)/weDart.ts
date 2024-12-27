@@ -17,7 +17,7 @@ export const weDart: TeamProject = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: "in-progress",
+  status: "paused",
   dates: {
     start: "2022",
   },
@@ -33,14 +33,42 @@ export const weDart: TeamProject = {
         preprocessor: "Sass",
       },
     },
+    backend: {
+      languages: ["Python"],
+      frameworks: ["Django"],
+      databases: ["PostgreSQL"],
+    },
     versionControl: ["Git", "GitHub"],
   },
   runsOn: ["web"],
   my: {
     chronologicalProjectOrder: 6,
-    learned: {},
+    learned: {
+      learnedAllUsedTechnologies: true,
+    },
   },
-  goals: ["Make it easy to play Dart and calculate the points"],
+  goals: ["Make it easy to play Dart, calculate players statistics and the points"],
+  workedFor: "Taliox",
   customers: ["weDart"],
   teams: [{ name: "weDart" }, { name: "Taliox" }],
+  myContribution: {
+    roles: ["Frontend Developer"],
+    dates: {
+      start: "Juni 2022",
+      end: "Juli 2023",
+    },
+    used: {
+      frontend: {
+        languages: ["JavaScript"],
+        frameworks: ["React"],
+        uiFramework: ["Ionic"],
+        stateManagements: ["React Context API", "Redux"],
+        style: {
+          languages: ["CSS"],
+          preprocessor: "Sass",
+        },
+      },
+      versionControl: ["Git", "GitHub"],
+    },
+  },
 };
