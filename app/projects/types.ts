@@ -24,6 +24,12 @@ interface Project {
 interface Urls {
   webPage?: string;
   gitHub?: string;
+  download?: {
+    playStore?: string;
+    appStore?: string;
+    desktop?: string;
+    other?: string;
+  };
   other?: string;
 }
 
@@ -113,7 +119,7 @@ interface Developers {
 interface TeamProject extends Project {
   teams?: Team[]; // If other teams are involved
   developers?: Developers[];
-  myContribution?: MyContribution;
+  myContribution: MyContribution;
 }
 
 // MyContribution
@@ -125,6 +131,10 @@ interface MyContribution {
     | "Full Stack Developer"
   )[];
   used?: Partial<TechnologyStack>;
+  dates: {
+    start: string;
+    end?: string;
+  };
 }
 
 type Projects = Project[];

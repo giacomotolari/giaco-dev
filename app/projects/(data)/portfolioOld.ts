@@ -35,7 +35,7 @@ export const portfolioOld: Project = {
   },
   runsOn: ["web"],
   my: {
-    chronologicalProjectOrder: 1,
+    chronologicalProjectOrder: 3,
     learned: { learnedAllUsedTechnologies: true },
   },
   goals: ["learning", "showcasing"],
