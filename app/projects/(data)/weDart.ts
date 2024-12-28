@@ -1,6 +1,7 @@
-import { TeamProject } from "../types";
+import * as ProjectTypes from "../types";
 
-export const weDart: TeamProject = {
+export const weDart: ProjectTypes.Project = {
+  id: "weDart",
   name: "weDart",
   description:
     "Dart Game, where you can play online and offline. The weDart Hardware help to calculate the points. Make it easy to play Dart, calculate players statistics and the points",
@@ -17,11 +18,11 @@ export const weDart: TeamProject = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: "paused",
+  status: ProjectTypes.Status.Paused,
   dates: {
     start: "2022",
   },
-  type: "for-company",
+  type: ProjectTypes.ProjectType.ForCompany,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -39,21 +40,23 @@ export const weDart: TeamProject = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: ["web", "mobile"],
+  runsOn: [ProjectTypes.RunsOn.Mobile],
   my: {
     chronologicalProjectOrder: 6,
     learned: {
       learnedAllUsedTechnologies: true,
     },
+    contribution: {
+      roles: [
+        ProjectTypes.ContributionRole.CrossPlatformDeveloper,
+        ProjectTypes.ContributionRole.FrontendDeveloper,
+      ],
+      dates: {
+        start: "Juni 2022",
+        end: "Juli 2023",
+      },
+    },
   },
   workedFor: "Taliox",
   customers: ["weDart"],
-  teams: [{ name: "weDart" }],
-  myContribution: {
-    roles: ["Frontend Developer"],
-    dates: {
-      start: "Juni 2022",
-      end: "Juli 2023",
-    },
-  },
 };

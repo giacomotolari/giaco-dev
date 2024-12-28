@@ -1,6 +1,7 @@
-import { TeamProject } from "../types";
+import * as ProjectTypes from "../types";
 
-export const digitalHUb: TeamProject = {
+export const digitalHUb: ProjectTypes.Project = {
+  id: "digital-hub",
   name: "digital Hub",
   description:
     "Privat community for digital Hub, rent a desk, meeting rooms and events.",
@@ -17,11 +18,11 @@ export const digitalHUb: TeamProject = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: "maintained",
+  status: ProjectTypes.Status.Paused,
   dates: {
     start: "2021",
   },
-  type: "for-company",
+  type: ProjectTypes.ProjectType.ForCompany,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -38,19 +39,19 @@ export const digitalHUb: TeamProject = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: ["web"],
+  runsOn: [ProjectTypes.RunsOn.Web],
   my: {
     chronologicalProjectOrder: 5,
     learned: {
       learnedAllUsedTechnologies: true,
     },
+    contribution: {
+      roles: [ProjectTypes.ContributionRole.FrontendDeveloper],
+      dates: {
+        start: "April 2022",
+      },
+    },
   },
   workedFor: "Taliox",
   customers: ["digital Hub"],
-  myContribution: {
-    roles: ["Frontend Developer"],
-    dates: {
-      start: "April 2022",
-    },
-  },
 };
