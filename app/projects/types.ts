@@ -1,6 +1,16 @@
-// ENUMS
-
 // Project Status
+/**
+ * Enum representing the various statuses a project can have.
+ * 
+ * @enum {string}
+ * @property {string} Planned - The project is planned but not yet started.
+ * @property {string} InProgress - The project is currently in progress.
+ * @property {string} Completed - The project has been completed.
+ * @property {string} Archived - The project has been archived.
+ * @property {string} Canceled - The project has been canceled.
+ * @property {string} Paused - The project is currently paused.
+ * @property {string} Maintained - The project is being maintained.
+ */
 export enum Status {
   Planned = "planned",
   InProgress = "in-progress",
@@ -11,11 +21,20 @@ export enum Status {
   Maintained = "maintained",
 }
 
-// Project Types
+
+/**
+ * Enum representing different types of projects.
+ * @enum {string}
+ * @property {string} Personal - A personal project.
+ * @property {string} TeamOpenSource - A team project that is open source.
+ * @property {string} TeamPrivate - A team project that is private for profit.
+ * @property {string} asEmployee - A project that was done as an employee.
+ */
 export enum ProjectType {
   Personal = "personal",
-  Team = "team",
-  ForCompany = "for-company",
+  TeamOpenSource = "team-open-source",
+  TeamPrivate = "team-private",
+  asEmployee = "as-employee",
 }
 
 // Runs On

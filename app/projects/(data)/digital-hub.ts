@@ -22,7 +22,7 @@ export const digitalHUb: ProjectTypes.Project = {
   dates: {
     start: "2021",
   },
-  type: ProjectTypes.ProjectType.ForCompany,
+  type: ProjectTypes.ProjectType.asEmployee,
   technologies: {
     frontend: {
       languages: ["JavaScript"],

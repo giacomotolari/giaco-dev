@@ -22,7 +22,7 @@ export const weDart: ProjectTypes.Project = {
   dates: {
     start: "2022",
   },
-  type: ProjectTypes.ProjectType.ForCompany,
+  type: ProjectTypes.ProjectType.asEmployee,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
