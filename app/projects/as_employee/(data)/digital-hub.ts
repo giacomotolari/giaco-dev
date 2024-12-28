@@ -1,6 +1,8 @@
-import * as ProjectTypes from "../../types";
+import * as projectTS from "../../types";
+import type * as asEmployeerProjectTS from "../types";
+import * as employerCompanyTS from "../../../companies/employer/types";
 
-export const digitalHUb: ProjectTypes.Project = {
+export const digitalHUb: asEmployeerProjectTS.AsEmployeeProject = {
   id: "digital-hub",
   name: "digital Hub",
   description:
@@ -15,11 +17,11 @@ export const digitalHUb: ProjectTypes.Project = {
         "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
     },
   },
-  status: ProjectTypes.Status.Paused,
+  status: projectTS.Status.Paused,
   dates: {
     start: "2021",
   },
-  type: ProjectTypes.ProjectType.asEmployee,
+  type: projectTS.ProjectType.asEmployee,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -36,19 +38,20 @@ export const digitalHUb: ProjectTypes.Project = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: [ProjectTypes.RunsOn.Web],
+  runsOn: [projectTS.RunsOn.Web],
   my: {
     chronologicalProjectOrder: 5,
     learned: {
       learnedAllUsedTechnologies: true,
     },
     contribution: {
-      roles: [ProjectTypes.ContributionRole.FrontendDeveloper],
+      roles: [projectTS.ContributionRole.FrontendDeveloper],
       dates: {
         start: "April 2022",
       },
     },
   },
-  employedBy: "Taliox",
+  employedBy: employerCompanyTS.IDs.taliox,
+
   customers: ["digital Hub"],
 };

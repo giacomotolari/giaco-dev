@@ -1,6 +1,8 @@
-import * as ProjectTypes from "../../types";
+import * as projectTS from "../../types";
+import type * as asEmployeerProjectTS from "../types";
+import * as employerCompanyTS from "../../../companies/employer/types";
 
-export const weDart: ProjectTypes.Project = {
+export const weDart: asEmployeerProjectTS.AsEmployeeProject = {
   id: "weDart",
   name: "weDart",
   description:
@@ -18,11 +20,11 @@ export const weDart: ProjectTypes.Project = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: ProjectTypes.Status.Paused,
+  status: projectTS.Status.Paused,
   dates: {
     start: "2022",
   },
-  type: ProjectTypes.ProjectType.asEmployee,
+  type: projectTS.ProjectType.asEmployee,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -40,7 +42,7 @@ export const weDart: ProjectTypes.Project = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: [ProjectTypes.RunsOn.Mobile],
+  runsOn: [projectTS.RunsOn.Mobile],
   my: {
     chronologicalProjectOrder: 6,
     learned: {
@@ -48,8 +50,8 @@ export const weDart: ProjectTypes.Project = {
     },
     contribution: {
       roles: [
-        ProjectTypes.ContributionRole.CrossPlatformDeveloper,
-        ProjectTypes.ContributionRole.FrontendDeveloper,
+        projectTS.ContributionRole.CrossPlatformDeveloper,
+        projectTS.ContributionRole.FrontendDeveloper,
       ],
       dates: {
         start: "Juni 2022",
@@ -57,6 +59,6 @@ export const weDart: ProjectTypes.Project = {
       },
     },
   },
-  employedBy: "Taliox",
+  employedBy: employerCompanyTS.IDs.taliox,
   customers: ["weDart"],
 };

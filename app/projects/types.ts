@@ -26,7 +26,7 @@ export enum Status {
  * @property {string} Personal - A personal project.
  * @property {string} TeamOpenSource - A team project that is open source.
  * @property {string} TeamPrivate - A team project that is private for profit.
- * @property {string} asEmployee - A project that was done as an employee.
+ * @property {string} asAsyee - A project that was done as an employee.
  */
 export enum ProjectType {
   Personal = "personal",
@@ -149,7 +149,7 @@ export interface Project {
   my?: My;
   goals?: ("learning" | "earn money" | "showcasing")[] | string[];
   customers?: string[];
-  employedBy?: string;
+  asyedBy?: string;
   extraInfos?: string;
 }
 
