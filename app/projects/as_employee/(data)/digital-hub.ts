@@ -6,16 +6,12 @@ export const digitalHUb: ProjectTypes.Project = {
   description:
     "Privat community for digital Hub, rent a desk, meeting rooms and events.",
   urls: {
-    webPage: "https://www.wedart.io/",
-    download: {
-      playStore: "https://play.google.com/store/apps/details?id=io.wedart.app",
-      appStore: "https://apps.apple.com/de/app/wedart/id6443843436",
-    },
+    webPage: "https://hubclub.app/login/",
   },
   categories: ["Community", "Rent a Desk", "Meeting Rooms", "Events"],
   assets: {
     images: {
-      projectPhoto: "/public/images/projects/profolio-old.png",
+      projectPhoto: "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
     },
   },
   status: ProjectTypes.Status.Paused,
