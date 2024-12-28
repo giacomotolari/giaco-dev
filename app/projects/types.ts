@@ -1,3 +1,6 @@
+export * from "./as_employee/types";
+
+
 /**
  * Enum representing the various statuses a project can have.
  *
@@ -131,28 +134,6 @@ export enum Gaols {
   Showcasing = "showcasing",
 }
 
-export interface Project {
-  id: string;
-  name: string;
-  description: string;
-  urls: Partial<Urls>;
-  categories: string[];
-  assets?: Partial<Assets>;
-  status: Status;
-  dates: {
-    start: string;
-    end?: string;
-  };
-  type: ProjectType;
-  technologies: Partial<TechnologyStack>;
-  runsOn: RunsOn[];
-  my?: My;
-  goals?: ("learning" | "earn money" | "showcasing")[] | string[];
-  customers?: string[];
-  asyedBy?: string;
-  extraInfos?: string;
-}
-
 export interface My {
   learned?: {
     technologies?: Partial<TechnologyStack>;
@@ -172,5 +153,26 @@ export interface MyContribution {
     end?: string;
   };
 }
+export interface Project<T extends ProjectType> {
+  id: string;
+  name: string;
+  description: string;
+  urls: Partial<Urls>;
+  categories: string[];
+  assets?: Partial<Assets>;
+  status: Status;
+  dates: {
+    start: string;
+    end?: string;
+  };
+  type: T;
+  technologies: Partial<TechnologyStack>;
+  runsOn: RunsOn[];
+  my?: My;
+  goals?: ("learning" | "earn money" | "showcasing")[] | string[];
+  customers?: string[];
+  asyedBy?: string;
+  extraInfos?: string;
+}
 
-export type Projects = Project[];
+export type Projects = Project<ProjectType>[];

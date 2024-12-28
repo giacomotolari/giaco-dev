@@ -1,7 +1,7 @@
 import * as projectTS from "../types";
-import * as employerCompanyTS from "../../companies/employer/types";
+import * as companyTS from "../../companies/types";
 
-export interface AsEmployeeProject extends projectTS.Project {
-  type: projectTS.ProjectType.asEmployee;
-  employedBy: employerCompanyTS.IDs;
+export interface AsEmployeeProject
+  extends projectTS.Project<projectTS.ProjectType.asEmployee> {
+  employedBy: companyTS.EmployerCompany.IDs;
 }

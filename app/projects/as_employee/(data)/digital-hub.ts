@@ -1,8 +1,7 @@
 import * as projectTS from "../../types";
-import type * as asEmployeerProjectTS from "../types";
-import * as employerCompanyTS from "../../../companies/employer/types";
+import * as companyTS from "../../../companies/types";
 
-export const digitalHUb: asEmployeerProjectTS.AsEmployeeProject = {
+export const digitalHUb: projectTS.AsEmployeeProject = {
   id: "digital-hub",
   name: "digital Hub",
   description:
@@ -51,7 +50,6 @@ export const digitalHUb: asEmployeerProjectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: employerCompanyTS.IDs.taliox,
-
+  employedBy: companyTS.EmployerCompany.IDs.taliox,
   customers: ["digital Hub"],
 };

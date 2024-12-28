@@ -1,8 +1,8 @@
 import * as projectTS from "../../types";
-import type * as asEmployeerProjectTS from "../types";
-import * as employerCompanyTS from "../../../companies/employer/types";
+import type * as asEmployeeProjectTS from "../types";
+import * as companyTS from "../../../companies/employer/types";
 
-export const weDart: asEmployeerProjectTS.AsEmployeeProject = {
+export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
   id: "weDart",
   name: "weDart",
   description:
@@ -59,6 +59,6 @@ export const weDart: asEmployeerProjectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: employerCompanyTS.IDs.taliox,
+  employedBy: companyTS.EmployerCompany.IDs.taliox,
   customers: ["weDart"],
 };
