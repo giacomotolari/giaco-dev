@@ -1,10 +1,10 @@
-import * as ProjectTypes from "../types";
+import * as ProjectTypes from "../../types";
 
-export const weDart: ProjectTypes.Project = {
-  id: "weDart",
-  name: "weDart",
+export const digitalHUb: ProjectTypes.Project = {
+  id: "digital-hub",
+  name: "digital Hub",
   description:
-    "Dart Game, where you can play online and offline. The weDart Hardware help to calculate the points. Make it easy to play Dart, calculate players statistics and the points",
+    "Privat community for digital Hub, rent a desk, meeting rooms and events.",
   urls: {
     webPage: "https://www.wedart.io/",
     download: {
@@ -12,7 +12,7 @@ export const weDart: ProjectTypes.Project = {
       appStore: "https://apps.apple.com/de/app/wedart/id6443843436",
     },
   },
-  categories: ["Dart Game"],
+  categories: ["Community", "Rent a Desk", "Meeting Rooms", "Events"],
   assets: {
     images: {
       projectPhoto: "/public/images/projects/profolio-old.png",
@@ -20,17 +20,16 @@ export const weDart: ProjectTypes.Project = {
   },
   status: ProjectTypes.Status.Paused,
   dates: {
-    start: "2022",
+    start: "2021",
   },
   type: ProjectTypes.ProjectType.asEmployee,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
-      frameworks: ["React"],
-      stateManagements: ["React Context API"],
+      libraries: ["jQuery"],
       style: {
         languages: ["CSS"],
-        preprocessor: "Sass",
+        frameworks: ["Bootstrap"],
       },
     },
     backend: {
@@ -40,23 +39,19 @@ export const weDart: ProjectTypes.Project = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: [ProjectTypes.RunsOn.Mobile],
+  runsOn: [ProjectTypes.RunsOn.Web],
   my: {
-    chronologicalProjectOrder: 6,
+    chronologicalProjectOrder: 5,
     learned: {
       learnedAllUsedTechnologies: true,
     },
     contribution: {
-      roles: [
-        ProjectTypes.ContributionRole.CrossPlatformDeveloper,
-        ProjectTypes.ContributionRole.FrontendDeveloper,
-      ],
+      roles: [ProjectTypes.ContributionRole.FrontendDeveloper],
       dates: {
-        start: "Juni 2022",
-        end: "Juli 2023",
+        start: "April 2022",
       },
     },
   },
   workedFor: "Taliox",
-  customers: ["weDart"],
+  customers: ["digital Hub"],
 };

@@ -1,4 +1,4 @@
-import { Projects } from "../types";
+import { Projects } from "../../types";
 import { weDart } from "./weDart";
 
 const projects: Projects = [weDart];
