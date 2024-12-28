@@ -149,7 +149,7 @@ export interface Project {
   my?: My;
   goals?: ("learning" | "earn money" | "showcasing")[] | string[];
   customers?: string[];
-  workedFor?: string;
+  employedBy?: string;
   extraInfos?: string;
 }
 

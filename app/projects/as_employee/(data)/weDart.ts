@@ -57,6 +57,6 @@ export const weDart: ProjectTypes.Project = {
       },
     },
   },
-  workedFor: "Taliox",
+  employedBy: "Taliox",
   customers: ["weDart"],
 };

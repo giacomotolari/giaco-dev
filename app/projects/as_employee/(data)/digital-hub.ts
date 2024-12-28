@@ -11,7 +11,8 @@ export const digitalHUb: ProjectTypes.Project = {
   categories: ["Community", "Rent a Desk", "Meeting Rooms", "Events"],
   assets: {
     images: {
-      projectPhoto: "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
+      projectPhoto:
+        "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
     },
   },
   status: ProjectTypes.Status.Paused,
@@ -48,6 +49,6 @@ export const digitalHUb: ProjectTypes.Project = {
       },
     },
   },
-  workedFor: "Taliox",
+  employedBy: "Taliox",
   customers: ["digital Hub"],
 };
