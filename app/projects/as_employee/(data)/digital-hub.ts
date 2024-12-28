@@ -50,6 +50,6 @@ export const digitalHUb: projectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: companyTS.EmployerCompany.IDs.taliox,
+  employedBy: companyTS.employerCompanyTS.IDs.taliox,
   customers: ["digital Hub"],
 };

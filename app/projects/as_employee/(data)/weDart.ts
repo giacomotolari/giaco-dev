@@ -1,6 +1,6 @@
 import * as projectTS from "../../types";
 import type * as asEmployeeProjectTS from "../types";
-import * as companyTS from "../../../companies/employer/types";
+import * as companyTS from "../../../companies/types";
 
 export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
   id: "weDart",
@@ -59,6 +59,6 @@ export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: companyTS.EmployerCompany.IDs.taliox,
+  employedBy: companyTS.employerCompanyTS.IDs.taliox,
   customers: ["weDart"],
 };

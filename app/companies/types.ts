@@ -1,6 +1,6 @@
-export * from "./customer/types";
-export * from "./employer/types";
-  
+export * as customerCompanyTS from "./customer/types";
+export * as employerCompanyTS from "./employer/types";
+
 export interface Company {
   name: string;
 }
