@@ -4,3 +4,5 @@ const weDart: companiesTS.customer.CustomerCompany = {
   type: companiesTS.CompanyType.STARTUP,
   url: "https://www.wedart.io/",
 };
+
+export default weDart;

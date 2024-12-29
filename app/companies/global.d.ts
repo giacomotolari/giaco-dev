@@ -27,7 +27,7 @@ export declare global {
     type Companies = Company[];
 
     namespace customer {
-      enum CustomerCompanyIDs {
+      enum IDs {
         WEDART = "weDart",
         DIGITAL_HUB = "digital-hub",
       }

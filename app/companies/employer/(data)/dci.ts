@@ -4,3 +4,5 @@ const DCI: companiesTS.employer.EmployerCompany = {
   type: companiesTS.CompanyType.SCHOOL,
   url: "https://digitalcareerinstitute.org/",
 };
+
+export default DCI;
