@@ -1,7 +1,6 @@
-import * as projectTS from "../../types";
-import * as companyTS from "../../../companies/types";
+import * as projectTS from "@/app/projects/global";
 
-export const digitalHUb: projectTS.AsEmployeeProject = {
+export const digitalHUb: projectTS.asEmployeeProjectTS.AsEmployeeProject = {
   id: "digital-hub",
   name: "digital Hub",
   description:
@@ -50,6 +49,6 @@ export const digitalHUb: projectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: companyTS.employerCompanyTS.IDs.taliox,
+  employedBy: companiesTS.employer.IDs.TALIOX,
   customers: ["digital Hub"],
 };

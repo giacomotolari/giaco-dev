@@ -1,8 +1,4 @@
-import * as projectTS from "../../types";
-import type * as asEmployeeProjectTS from "../types";
-import * as companyTS from "../../../companies/types";
-
-export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
+export const weDart: projectTS.asEmployee.AsEmployeeProject = {
   id: "weDart",
   name: "weDart",
   description:
@@ -20,7 +16,7 @@ export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: projectTS.Status.Paused,
+  status: projectTS.ProjectStatus.Paused,
   dates: {
     start: "2022",
   },
@@ -59,6 +55,6 @@ export const weDart: asEmployeeProjectTS.AsEmployeeProject = {
       },
     },
   },
-  employedBy: companyTS.employerCompanyTS.IDs.taliox,
+  employedBy: companiesTS.employer.IDs.TALIOX,
   customers: ["weDart"],
 };
