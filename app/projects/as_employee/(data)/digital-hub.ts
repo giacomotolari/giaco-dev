@@ -1,6 +1,4 @@
-import * as projectTS from "@/app/projects/global";
-
-export const digitalHUb: projectTS.asEmployeeProjectTS.AsEmployeeProject = {
+const digitalHUb: projectTS.asEmployee.AsEmployeeProject = {
   id: "digital-hub",
   name: "digital Hub",
   description:
@@ -15,7 +13,7 @@ export const digitalHUb: projectTS.asEmployeeProjectTS.AsEmployeeProject = {
         "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
     },
   },
-  status: projectTS.Status.Paused,
+  status: projectTS.ProjectStatus.Paused,
   dates: {
     start: "2021",
   },
@@ -52,3 +50,5 @@ export const digitalHUb: projectTS.asEmployeeProjectTS.AsEmployeeProject = {
   employedBy: companiesTS.employer.IDs.TALIOX,
   customers: ["digital Hub"],
 };
+
+export default digitalHUb;

@@ -1,6 +1,6 @@
-import { Projects } from "../../global";
-import { weDart } from "./weDart";
+import  weDart  from "./weDart";
+import  digitalHUb  from "./digital-hub";
 
-const projects: Projects = [weDart];
+const asEmployeeProjects: projectTS.asEmployee.AsEmployeeProjects = [weDart, digitalHUb];
 
-export default projects;
+export default asEmployeeProjects;

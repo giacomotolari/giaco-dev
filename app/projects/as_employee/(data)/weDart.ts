@@ -1,4 +1,4 @@
-export const weDart: projectTS.asEmployee.AsEmployeeProject = {
+const weDart: projectTS.asEmployee.AsEmployeeProject = {
   id: "weDart",
   name: "weDart",
   description:
@@ -58,3 +58,5 @@ export const weDart: projectTS.asEmployee.AsEmployeeProject = {
   employedBy: companiesTS.employer.IDs.TALIOX,
   customers: ["weDart"],
 };
+
+export default weDart;
