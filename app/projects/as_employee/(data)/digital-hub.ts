@@ -13,11 +13,11 @@ const digitalHUb: projectTS.asEmployee.AsEmployeeProject = {
         "https://www.de.digital/DIGITAL/Redaktion/DE/Bilder/Logos/de-hub-834x405.jpg?__blob=normal&v=1",
     },
   },
-  status: projectTS.ProjectStatus.Paused,
+  status: projectTS.ProjectStatus.PAUSED,
   dates: {
     start: "2021",
   },
-  type: projectTS.ProjectType.asEmployee,
+  type: projectTS.ProjectType.AS_EMPLOYEE,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -34,14 +34,14 @@ const digitalHUb: projectTS.asEmployee.AsEmployeeProject = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: [projectTS.RunsOn.Web],
+  runsOn: [projectTS.RunsOn.WEB],
   my: {
     chronologicalProjectOrder: 5,
     learned: {
       learnedAllUsedTechnologies: true,
     },
     contribution: {
-      roles: [projectTS.ContributionRole.FrontendDeveloper],
+      roles: [projectTS.ContributionRole.FRONTEND_DEVELOPER],
       dates: {
         start: "April 2022",
       },

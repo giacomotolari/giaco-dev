@@ -16,11 +16,11 @@ const weDart: projectTS.asEmployee.AsEmployeeProject = {
       projectPhoto: "/public/images/projects/profolio-old.png",
     },
   },
-  status: projectTS.ProjectStatus.Paused,
+  status: projectTS.ProjectStatus.PAUSED,
   dates: {
     start: "2022",
   },
-  type: projectTS.ProjectType.asEmployee,
+  type: projectTS.ProjectType.AS_EMPLOYEE,
   technologies: {
     frontend: {
       languages: ["JavaScript"],
@@ -38,7 +38,7 @@ const weDart: projectTS.asEmployee.AsEmployeeProject = {
     },
     versionControl: ["Git", "GitLab"],
   },
-  runsOn: [projectTS.RunsOn.Mobile],
+  runsOn: [projectTS.RunsOn.MOBILE],
   my: {
     chronologicalProjectOrder: 6,
     learned: {
@@ -46,8 +46,8 @@ const weDart: projectTS.asEmployee.AsEmployeeProject = {
     },
     contribution: {
       roles: [
-        projectTS.ContributionRole.CrossPlatformDeveloper,
-        projectTS.ContributionRole.FrontendDeveloper,
+        projectTS.ContributionRole.CROSS_PLATFORM_DEVELOPER,
+        projectTS.ContributionRole.FRONTEND_DEVELOPER,
       ],
       dates: {
         start: "Juni 2022",

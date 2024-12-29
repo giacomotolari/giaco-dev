@@ -13,28 +13,28 @@ export declare global {
      * @property {string} Maintained - The project is being maintained.
      */
     enum ProjectStatus {
-      Planned = "planned",
-      InProgress = "in-progress",
-      Completed = "completed",
-      Archived = "archived",
-      Canceled = "canceled",
-      Paused = "paused",
-      Maintained = "maintained",
+      PLANNED = "planned",
+      IN_PROGRESS = "in-progress",
+      COMPLETED = "completed",
+      ARCHIVED = "archived",
+      CANCELED = "canceled",
+      PAUSED = "paused",
+      MAINTAINED = "maintained",
     }
 
     /**
      * Enum representing different types of projects.
      * @enum {string}
-     * @property {string} Personal - A personal project.
-     * @property {string} TeamOpenSource - A team project that is open source.
+     * @property {string} PERSONAL - A personal project.
+     * @property {string} TEAM_OPEN_SOURCE - A team project that is open source.
      * @property {string} TeamPrivate - A team project that is private for profit.
      * @property {string} asAsyee - A project that was done as an employee.
      */
     enum ProjectType {
-      Personal = "personal",
-      TeamOpenSource = "team-open-source",
-      TeamPrivate = "team-private",
-      asEmployee = "as-employee",
+      PERSONAL = "personal",
+      TEAM_OPEN_SOURCE = "team-open-source",
+      TEAM_PRIVATE = "team-private",
+      AS_EMPLOYEE = "as-employee",
     }
 
     /**
@@ -47,21 +47,21 @@ export declare global {
      * @property {string} Android - The project runs on Android.
      */
     enum RunsOn {
-      Web = "web",
-      Mobile = "mobile",
-      Desktop = "desktop",
-      iOS = "ios",
-      Android = "android",
+      WEB = "web",
+      MOBILE = "mobile",
+      DESKTOP = "desktop",
+      IOS = "ios",
+      ANDROID = "android",
     }
 
     enum ContributionRole {
-      FrontendDeveloper = "Frontend Developer",
-      CrossPlatformDeveloper = "Cross-Platform Developer",
-      AndroidDeveloper = "Android Developer",
-      MobileDeveloper = "Mobile Developer",
-      iOSDeveloper = "iOS Developer",
-      BackendDeveloper = "Backend Developer",
-      FullStackDeveloper = "Full Stack Developer",
+      FRONTEND_DEVELOPER = "Frontend Developer",
+      CROSS_PLATFORM_DEVELOPER = "Cross-Platform Developer",
+      ANDROID_DEVELOPER = "Android Developer",
+      MOBILE_DEVELOPER = "Mobile Developer",
+      IOS_DEVELOPER = "iOS Developer",
+      BACKEND_DEVELOPER = "Backend Developer",
+      FULL_STACK_DEVELOPER = "Full Stack Developer",
     }
 
     interface Assets {
@@ -114,7 +114,7 @@ export declare global {
       frameworks?: CSSFramework[];
     }
 
-    type CSSFramework = "Bootstrap" | "TailwindCSS";
+    type CSSFramework = "Bootstrap" | "Tailwind CSS";
 
     interface BackendStack {
       languages: BackendLanguage[];
@@ -128,9 +128,9 @@ export declare global {
     type Database = "MongoDB" | "PostgreSQL" | "SQLite";
 
     enum Gaols {
-      Learning = "learning",
-      EarnMoney = "earn money",
-      Showcasing = "showcasing",
+      LEARNING = "learning",
+      EARN_MONEY = "earn money",
+      SHOWCASING = "showcasing",
     }
 
     interface My {
@@ -140,8 +140,8 @@ export declare global {
         other?: string[];
         learnedAllUsedTechnologies?: boolean;
       };
-      contribution: MyContribution;
       goals?: Gaols[];
+      contribution?: MyContribution;
       chronologicalProjectOrder: number;
     }
 
@@ -168,7 +168,7 @@ export declare global {
       technologies: Partial<TechnologyStack>;
       runsOn: RunsOn[];
       my?: My;
-      goals?: ("learning" | "earn money" | "showcasing")[] | string[];
+      goals?: Gaols[];
       customers?: string[];
       asyedBy?: string;
       extraInfos?: string;
@@ -183,6 +183,13 @@ export declare global {
       }
 
       type AsEmployeeProjects = AsEmployeeProject[];
+    }
+
+    namespace personal {
+      interface PersonalProject
+        extends projectTS.Project<projectTS.ProjectType.Personal> {}
+
+      type PersonalProjects = PersonalProject[];
     }
   }
 }
